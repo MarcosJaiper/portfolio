@@ -1,0 +1,312 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h1, h2, h3 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    color: #333;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Header Styles */
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+  
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Flexbox to align items */
+    justify-content: space-between; /* Space between the logo and nav */
+    align-items: center; /* Vertically center the logo and nav */
+}
+
+.logo {
+    font-size: 2.5rem; /* Increased font size */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff; /* White color */
+    margin-left: 20px;
+    flex-grow: 1; /* Ensures the logo takes up available space */
+    text-align: center; /* Center the text */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 0 25px;
+}
+
+.nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav ul li a:hover {
+    background: #0073e6;
+    border-radius: 5px;
+    transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-background.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s forwards;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #0073e6;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 1s;
+    margin-top: 20px;
+}
+
+.hero .btn:hover {
+    background: #005bb5;
+    transform: translateY(-5px);
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.about {
+    background: #fff;
+    padding: 50px 0;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.5s;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Section */
+.services {
+    background: #f4f4f4;
+    padding: 60px 0;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.services ul li {
+    font-size: 1.3rem;
+    margin: 15px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.services ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.services ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.services ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Contact Section */
+.contact {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact ul li {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.contact ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.contact ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.contact ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+    background: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.portfolio p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item video {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #666;
+}
